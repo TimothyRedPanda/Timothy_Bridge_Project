@@ -9,6 +9,7 @@ But this is a placeholder and I will be expanding upon this project in the comin
 After `git clone` you need to do the following
     
 * `npm install`
+* `composer install`
 * `npm run dev`
 * `php artisan serve`
 
