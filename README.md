@@ -8,7 +8,7 @@ But this is a placeholder and I will be expanding upon this project in the comin
 ### To run this project
 After `git clone` you need to do the following
 
-* Navigate to the database folder and `touch database.sqlite`
+* Navigate to the database folder and `touch database.sqlite` (If there isn't one)
 * Navigate back to the route folder.
 * `npm install`
 * `composer install`
