@@ -12,6 +12,7 @@ After `git clone` you need to do the following
 * Navigate back to the route folder.
 * `npm install`
 * `composer install`
+* `php artisan migrate`
 * `npm run dev`
 * `php artisan serve`
 
