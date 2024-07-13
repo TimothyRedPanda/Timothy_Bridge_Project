@@ -8,7 +8,11 @@ But this is a placeholder and I will be expanding upon this project in the comin
 ### To run this project
 After `git clone` you need to do the following
     
+* `cd Timothy_Bridge_Project`
 * `npm install`
+* `composer install`
+* `cp .env.example .env`
+* `php artisan key:generate`
 * `npm run dev`
 * `php artisan serve`
 
