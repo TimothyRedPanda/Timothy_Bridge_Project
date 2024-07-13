@@ -13,6 +13,6 @@ setInterval(() => {
     const time = new Date().toLocaleTimeString();
     const timeNumb = time.split(":").join("");
     const binary = Number(timeNumb).toString(16)
-    name.value = `${time} = ${binary}`;
+    name.value = `${time} = 0x${binary}`;
 }, 1000)
 </script>
