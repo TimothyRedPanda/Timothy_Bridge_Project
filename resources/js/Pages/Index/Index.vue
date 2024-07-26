@@ -1,18 +1,36 @@
-<template>
-    <div class="container mx-auto grid place-content-center w-dvw h-dvh">
-        <p class="text-4xl font-bold text-blue-500 p-4">{{name}}</p>
-    </div>
-</template>
-
 <script setup>
-import {ref} from "vue";
+import {onMounted} from "vue";
 
-const name = ref('The time in hex is...');
+onMounted(() => {
+    const title = document.getElementById("title");
+    const titleText = "Welcome";
+    titleText.split("").map((letter) => {
+        const letterSpan = document.createElement("span")
+        letterSpan.textContent = letter;
+        letterSpan.style.color = "#23387c"
+        letterSpan.onClick = () => {
+            letterSpan.textContent = "no";
+        }
+        letterSpan.onmouseover = () => {
+            if (letterSpan.style.color !== "transparent") {
+                letterSpan.style.color = "transparent";
+            } else {
+                letterSpan.style.color = "#23387c";
+            }
+            letterSpan.style.transition = "0.35s all ease-in-out";
+        };
+        title.appendChild(letterSpan);
+    })
+});
 
-setInterval(() => {
-    const time = new Date().toLocaleTimeString();
-    const timeNumb = time.split(":").join("");
-    const binary = Number(timeNumb).toString(16)
-    name.value = `${time} = 0x${binary}`;
-}, 1000)
 </script>
+
+<template>
+    <main class="container mx-auto grid gap-1 text-blue-950 justify-center place-content-center w-dvw h-dvh">
+        <section id="title" class="text-5xl p-4 text-amber-50 rounded"></section>
+        <span class="gap-2 text-2xl flex place-content-center">
+            <a class="text-1xl" href="/">Home</a>
+            <a class="text-1xl" href="/convert">Convert</a>
+        </span>
+    </main>
+</template>
